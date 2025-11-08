@@ -3,9 +3,10 @@ import { Mail, Send } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24 bg-gradient-to-b from-[#070815] via-[#0a0f1f] to-[#070815] text-white">
-      <div className="absolute inset-0 opacity-40 pointer-events-none">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[50rem] h-[50rem] rounded-full blur-3xl bg-cyan-500/20" />
+    <section id="contact" className="relative py-24 bg-gradient-to-b from-[#070815] via-[#0a0f1f] to-[#070815] text-white overflow-hidden">
+      {/* background accents */}
+      <div className="pointer-events-none absolute inset-0 opacity-40">
+        <motion.div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[50rem] h-[50rem] rounded-full blur-3xl bg-cyan-500/20" animate={{ y: [0, -15, 0] }} transition={{ duration: 12, repeat: Infinity }} />
       </div>
 
       <div className="relative max-w-xl mx-auto px-4 text-center">
@@ -43,7 +44,7 @@ export default function Contact() {
           </div>
           <label className="block text-sm text-white/70 mt-6">Message</label>
           <textarea rows={4} placeholder="Tell me about your idea..." className="mt-2 w-full bg-white/5 border border-white/10 rounded-xl px-3 py-3 outline-none placeholder:text-white/40 text-white" />
-          <button className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-black font-medium px-5 py-3">
+          <button className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-black font-medium px-5 py-3 shadow-[0_10px_30px_rgba(56,189,248,0.25)] hover:shadow-[0_20px_40px_rgba(217,70,239,0.25)] transition-shadow">
             <Send className="w-4 h-4" /> Send
           </button>
         </motion.form>

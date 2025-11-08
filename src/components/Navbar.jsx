@@ -11,12 +11,14 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all ${
-      scrolled ? 'backdrop-blur-md bg-black/40 shadow-lg' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all ${
+        scrolled ? 'backdrop-blur-md bg-black/40 shadow-lg' : 'bg-transparent'
+      }`}
+    >
       <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2 text-white">
-          <Rocket className="w-6 h-6 text-cyan-400" />
+          <Rocket className="w-6 h-6 text-cyan-400 animate-[float_6s_ease-in-out_infinite]" />
           <span className="font-semibold tracking-tight">Playfolio</span>
         </a>
         <div className="hidden sm:flex items-center gap-6 text-sm">
